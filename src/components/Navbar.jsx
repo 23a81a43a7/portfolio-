@@ -35,11 +35,7 @@ const Navbar = ({ toggleTheme, isDark }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <div className="flex-shrink-0 cursor-pointer">
-            <Link to="hero" smooth={true} duration={500} className="text-2xl font-bold text-glow font-heading text-accent-neon">
-              &lt;Dev.AI/&gt;
-            </Link>
-          </div>
+          <div className="flex-shrink-0"></div>
           
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (

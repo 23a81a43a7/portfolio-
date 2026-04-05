@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Send, MapPin, Mail, Phone, Code2, Briefcase, Camera, X, CheckCircle, AlertCircle, Loader } from 'lucide-react';
+import { Send, MapPin, Mail, Phone, CheckCircle, AlertCircle, Loader, Github, Linkedin, Home } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const SERVICE_ID  = 'service_u6ljtvw';
@@ -97,17 +97,23 @@ const Contact = () => {
             <div>
               <h4 className="text-lg font-medium text-white mb-4">Follow Me</h4>
               <div className="flex space-x-4">
+                {/* GitHub */}
                 <a href="https://github.com/ayyappa-korlepara" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-700 hover:scale-110 transition-all cursor-pointer" title="GitHub">
-                  <Code2 size={22} />
+                  <Github size={22} />
                 </a>
+                {/* LinkedIn */}
                 <a href="https://linkedin.com/in/ayyappa-korlepara" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-[#0A66C2] hover:bg-slate-700 hover:scale-110 transition-all cursor-pointer" title="LinkedIn">
-                  <Briefcase size={22} />
+                  <Linkedin size={22} />
                 </a>
-                <a href="https://www.geeksforgeeks.org/user/korleparaayyappa" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-[#2f8d46] hover:bg-slate-700 hover:scale-110 transition-all cursor-pointer" title="GeeksforGeeks">
-                  <Camera size={22} />
+                {/* GeeksForGeeks - custom SVG */}
+                <a href="https://www.geeksforgeeks.org/user/korleparaayyappa" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-[#2f8d46] hover:bg-slate-700 hover:scale-110 transition-all cursor-pointer" title="GeeksForGeeks">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.45 14.315c-.143.28-.334.532-.565.745-.474.44-1.1.64-1.73.565h-.14c-.592-.06-1.137-.332-1.537-.765l-.24-.27c-.09-.09-.09-.21 0-.3l.6-.54c.09-.09.225-.09.315 0l.239.27c.202.23.483.372.784.395.214.018.43-.045.6-.18.195-.158.308-.39.308-.636 0-.21-.09-.42-.262-.554l-2.88-2.61c-.48-.435-.756-1.05-.756-1.694 0-.616.24-1.2.668-1.634.44-.45 1.05-.695 1.68-.695.63 0 1.24.245 1.68.695l.24.27c.09.09.09.21 0 .3l-.6.54c-.09.09-.225.09-.315 0l-.24-.27c-.195-.22-.476-.345-.765-.345s-.57.125-.765.345c-.195.21-.3.495-.3.78 0 .285.105.555.3.765l2.88 2.61c.45.405.72.99.72 1.604 0 .384-.09.765-.27 1.11zm-18.9 0c.143.28.334.532.565.745.474.44 1.1.64 1.73.565h.14c.592-.06 1.137-.332 1.537-.765l.24-.27c.09-.09.09-.21 0-.3l-.6-.54c-.09-.09-.225-.09-.315 0l-.239.27c-.202.23-.483.372-.784.395-.214.018-.43-.045-.6-.18-.195-.158-.308-.39-.308-.636 0-.21.09-.42.262-.554l2.88-2.61c.48-.435.756-1.05.756-1.694 0-.616-.24-1.2-.668-1.634-.44-.45-1.05-.695-1.68-.695-.63 0-1.24.245-1.68.695l-.24.27c-.09.09-.09.21 0 .3l.6.54c.09.09.225.09.315 0l.24-.27c.195-.22.476-.345.765-.345s.57.125.765.345c.195.21.3.495.3.78 0 .285-.105.555-.3.765l-2.88 2.61c-.45.405-.72.99-.72 1.604 0 .384.09.765.27 1.11zM12 15.545c-1.17 0-2.25-.468-3.045-1.274L8.7 14.01c-.09-.09-.09-.225 0-.315l.63-.57c.09-.09.225-.09.315 0l.255.255c.57.585 1.335.9 2.1.9.765 0 1.53-.315 2.1-.9l.255-.255c.09-.09.225-.09.315 0l.63.57c.09.09.09.225 0 .315l-.255.261c-.795.806-1.875 1.274-3.045 1.274z"/>
+                  </svg>
                 </a>
-                <a href="https://leetcode.com/korleparaayyappa" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-[#FFA116] hover:bg-slate-700 hover:scale-110 transition-all cursor-pointer" title="LeetCode">
-                  <X size={22} />
+                {/* Home */}
+                <a href="#hero" className="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-accent-neon hover:bg-slate-700 hover:scale-110 transition-all cursor-pointer" title="Home">
+                  <Home size={22} />
                 </a>
               </div>
             </div>
