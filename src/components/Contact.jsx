@@ -68,7 +68,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-medium text-white mb-1">Location</h4>
-                    <p className="text-slate-400">Kakinada, Andhra Pradesh<br />India - 533 001</p>
+                    <p className="text-slate-400">Moyyeru, Andhra Pradesh<br />India - 534 134</p>
                   </div>
                 </div>
 

@@ -50,12 +50,10 @@ const About = () => {
               Hi, I'm <span className="text-accent-neon">Ayyappa Korlepara</span>
             </h3>
             <p className="text-slate-300 mb-6 leading-relaxed text-lg">
-              I am a motivated and hardworking student currently pursuing a Bachelor's Degree in Computer Science with a specialization in Artificial Intelligence at JNTUK University.
+              I am a motivated and hardworking student currently pursuing a Bachelor's Degree in Computer Science with a specialization in Artificial Intelligence at Sri Vasavi Engineering College.
               I am seeking an opportunity to utilize my technical skills in Java, Web Development, and Machine Learning to grow professionally while contributing to the success of an organization.
             </p>
-            <p className="text-slate-300 mb-8 leading-relaxed text-lg">
-              Alongside my academics, I enjoy taking part in hackathons, such as the Smart India Hackathon where I contributed to developing AI-powered solutions, and organizing tech events.
-            </p>
+
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <div className="flex items-center text-slate-300">
@@ -64,7 +62,7 @@ const About = () => {
               </div>
               <div className="flex items-center text-slate-300">
                 <MapPin size={20} className="text-accent-blue mr-3 flex-shrink-0" />
-                <span>Kakinada, AP, India</span>
+                <span>Moyyeru, AP, India</span>
               </div>
               <div className="flex items-center text-slate-300">
                 <Mail size={20} className="text-accent-neon mr-3 flex-shrink-0" />
