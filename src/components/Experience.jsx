@@ -70,8 +70,8 @@ const Experience = () => {
         </motion.div>
 
         <div className="relative">
-          {/* Vertical Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-800 -translate-x-1/2 hidden md:block"></div>
+          {/* Vertical Line - desktop center, mobile left */}
+          <div className="absolute left-5 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent-purple via-accent-blue to-accent-neon -translate-x-1/2"></div>
 
           <div className="space-y-12">
             {timelineData.map((item, idx) => (
@@ -85,13 +85,13 @@ const Experience = () => {
                   idx % 2 === 0 ? "md:flex-row-reverse" : ""
                 }`}
               >
-                {/* Timeline Node */}
-                <div className="absolute left-4 md:left-1/2 -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-gradient-to-br from-accent-purple to-accent-blue z-10 text-white hidden md:flex hover:scale-125 transition-transform duration-300">
+                {/* Timeline Node - visible on all screens */}
+                <div className="absolute left-5 md:left-1/2 -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-gradient-to-br from-accent-purple to-accent-blue z-10 text-white hover:scale-125 transition-transform duration-300">
                   {item.icon}
                 </div>
 
                 {/* Content Card */}
-                <div className={`md:w-1/2 pl-12 md:pl-0 ${idx % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
+                <div className={`w-full md:w-1/2 pl-14 md:pl-0 ${idx % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
                   <div className="glass-card p-6 border-t-2 border-t-white/10 hover:border-t-accent-neon transition-colors duration-300 relative group">
                     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                       {item.icon}

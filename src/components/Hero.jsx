@@ -28,7 +28,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading mb-6 tracking-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading mb-6 tracking-tight leading-tight"
         >
           I am <span className="text-glow bg-clip-text text-transparent bg-gradient-to-r from-accent-purple via-accent-neon to-accent-blue">Ayyappa Korlepara</span>
         </motion.h1>
@@ -37,7 +37,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-2xl md:text-4xl font-light text-slate-300 mb-8 h-12"
+          className="text-xl md:text-3xl font-light text-slate-300 mb-8 min-h-[3rem] flex items-center justify-center"
         >
           <span>A </span>
           <span className="font-semibold text-white">
