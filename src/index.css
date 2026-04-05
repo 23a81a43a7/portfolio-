@@ -4,12 +4,70 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Dark Mode (default) ── */
+:root, body.dark {
+  --color-primary:   #0f172a;
+  --color-secondary: #1e293b;
+  --color-surface:   #1e293b;
+  --text-base:       #f1f5f9;
+  --text-muted:      #94a3b8;
+  --border-color:    rgba(255,255,255,0.1);
+  --scrollbar-track: #0f172a;
+  --scrollbar-thumb: #334155;
+  --scrollbar-hover: #475569;
+}
+
+/* ── Light Mode ── */
+body:not(.dark) {
+  --color-primary:   #f1f5f9;
+  --color-secondary: #e2e8f0;
+  --color-surface:   #ffffff;
+  --text-base:       #0f172a;
+  --text-muted:      #475569;
+  --border-color:    rgba(0,0,0,0.1);
+  --scrollbar-track: #e2e8f0;
+  --scrollbar-thumb: #94a3b8;
+  --scrollbar-hover: #64748b;
+}
+
 @layer base {
   body {
-    @apply bg-primary text-slate-100 font-sans antialiased overflow-x-hidden;
+    background-color: var(--color-primary);
+    color: var(--text-base);
+    @apply font-sans antialiased overflow-x-hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+  }
+
+  /* Light mode text overrides */
+  body:not(.dark) .text-slate-100 { color: #0f172a !important; }
+  body:not(.dark) .text-slate-300 { color: #334155 !important; }
+  body:not(.dark) .text-slate-400 { color: #475569 !important; }
+  body:not(.dark) .text-white     { color: #0f172a !important; }
+
+  /* Light mode card/glass overrides */
+  body:not(.dark) .glass-card {
+    background: rgba(255,255,255,0.7) !important;
+    border-color: rgba(0,0,0,0.1) !important;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.1) !important;
+  }
+  body:not(.dark) .glass {
+    background: rgba(255,255,255,0.6) !important;
+    border-color: rgba(0,0,0,0.1) !important;
+  }
+
+  /* Light mode slate-800 bg overrides */
+  body:not(.dark) .bg-slate-800 { background-color: #e2e8f0 !important; }
+  body:not(.dark) .bg-slate-900 { background-color: #f1f5f9 !important; }
+  body:not(.dark) .bg-slate-900\/50 { background-color: rgba(241,245,249,0.8) !important; }
+
+  /* Input field text in light mode */
+  body:not(.dark) input,
+  body:not(.dark) textarea {
+    color: #0f172a !important;
+    border-color: rgba(0,0,0,0.15) !important;
   }
 }
 
@@ -33,12 +91,12 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f172a; 
+  background: var(--scrollbar-track);
 }
 ::-webkit-scrollbar-thumb {
-  background: #334155; 
+  background: var(--scrollbar-thumb);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569; 
+  background: var(--scrollbar-hover);
 }

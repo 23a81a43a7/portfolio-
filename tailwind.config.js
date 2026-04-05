@@ -8,8 +8,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#0f172a", // Very dark slate
-        secondary: "#1e293b",
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        surface: "var(--color-surface)",
         accent: {
           blue: "#3b82f6",
           purple: "#8b5cf6",
