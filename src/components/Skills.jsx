@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { 
-  Code2, 
-  Database, 
-  BrainCircuit, 
-  Wrench 
+import {
+  Code2,
+  Database,
+  BrainCircuit,
+  Wrench
 } from 'lucide-react';
 
 const skillsData = [
@@ -12,10 +12,10 @@ const skillsData = [
     icon: <Code2 size={24} />,
     color: "text-accent-blue",
     skills: [
-      { name: "Java", level: 90 },
-      { name: "C Programming", level: 85 },
-      { name: "HTML & CSS", level: 85 },
-      { name: "JavaScript", level: 80 }
+      { name: "Java", level: 70 },
+      { name: "C Programming", level: 50 },
+      { name: "HTML & CSS", level: 50 },
+      { name: "JavaScript", level: 50 }
     ]
   },
   {
@@ -23,10 +23,10 @@ const skillsData = [
     icon: <Database size={24} />,
     color: "text-accent-purple",
     skills: [
-      { name: "MySQL", level: 85 },
-      { name: "MongoDB", level: 80 },
-      { name: "Machine Learning", level: 85 },
-      { name: "Python", level: 80 }
+      { name: "MySQL", level: 60 },
+      { name: "MongoDB", level: 70 },
+      { name: "Machine Learning", level: 70 },
+      { name: "Python", level: 60 }
     ]
   },
   {
@@ -36,8 +36,7 @@ const skillsData = [
     skills: [
       { name: "Agentforce Specialist", level: 100 },
       { name: "Oracle Gen AI", level: 100 },
-      { name: "NPTEL IoT", level: 100 },
-      { name: "Data Processing", level: 85 }
+      { name: "NPTEL IoT", level: 73 }
     ]
   },
   {
@@ -46,7 +45,7 @@ const skillsData = [
     color: "text-slate-300",
     skills: [
       { name: "Problem Solving", level: 95 },
-      { name: "Communication Skills", level: 90 },
+      { name: "Communication Skills", level: 70 },
       { name: "Team Collaboration", level: 95 },
       { name: "Event Management", level: 90 }
     ]
@@ -58,11 +57,11 @@ const Skills = () => {
     <section id="skills" className="py-24 relative z-10 bg-slate-900/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           transition={{ duration: 0.5 }}
-           className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-purple">My Skills</span>
@@ -84,7 +83,7 @@ const Skills = () => {
                 {category.icon}
               </div>
               <h3 className="text-xl font-bold text-white mb-6 font-heading">{category.category}</h3>
-              
+
               <div className="space-y-4">
                 {category.skills.map((skill, index) => (
                   <div key={index}>
@@ -93,18 +92,17 @@ const Skills = () => {
                       <span className="text-sm font-medium text-slate-400">{skill.level}%</span>
                     </div>
                     <div className="w-full bg-slate-700/50 rounded-full h-2">
-                       <motion.div
-                         initial={{ width: 0 }}
-                         whileInView={{ width: `${skill.level}%` }}
-                         viewport={{ once: true }}
-                         transition={{ duration: 1, delay: 0.2 + (index * 0.1) }}
-                         className={`h-2 rounded-full bg-gradient-to-r ${
-                           idx === 0 ? 'from-blue-600 to-accent-blue' :
-                           idx === 1 ? 'from-purple-600 to-accent-purple' :
-                           idx === 2 ? 'from-sky-600 to-accent-neon' :
-                           'from-slate-500 to-slate-300'
-                         }`}
-                       ></motion.div>
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: 0.2 + (index * 0.1) }}
+                        className={`h-2 rounded-full bg-gradient-to-r ${idx === 0 ? 'from-blue-600 to-accent-blue' :
+                            idx === 1 ? 'from-purple-600 to-accent-purple' :
+                              idx === 2 ? 'from-sky-600 to-accent-neon' :
+                                'from-slate-500 to-slate-300'
+                          }`}
+                      ></motion.div>
                     </div>
                   </div>
                 ))}
