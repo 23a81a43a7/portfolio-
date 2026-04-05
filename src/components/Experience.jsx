@@ -4,17 +4,18 @@ import { Briefcase, GraduationCap, Award, Activity } from 'lucide-react';
 const timelineData = [
   {
     type: "activities",
-    title: "Participant - Smart India Hackathon",
-    organization: "Rajasthan's Technical Education Department",
-    date: "October 2024",
-    description: "Developed an AI-powered chatbot designed to efficiently handle admission inquiries, offering 24/7 support on fees, scholarships, and admission processes through robust NLP integration.",
+    title: "24-hrs Hackthon Co-Ordinator",
+    organization: "Sri Vasavi Engineering College",
+    date: "March 2026",
+    description: "Served as a Coordinator for a 24-hour GDG hackathon at Sri Vasavi Engineering College, overseeing participant management, logistics, and event execution for roughly 95 teams. Collaborated with teams and mentors to ensure smooth operations and supported problem resolution during the event.",
+
     icon: <Activity size={20} />
   },
   {
     type: "activities",
     title: "CSI AI 100K Event Co-Ordinator",
-    organization: "JNTUK University",
-    date: "Recent",
+    organization: "Sri Vasavi Engineering College",
+    date: "February 2026",
     description: "Organized and co-ordinated AI-related events, managing teams and ensuring smooth execution of technical sessions.",
     icon: <Briefcase size={20} />
   },
@@ -29,9 +30,9 @@ const timelineData = [
   {
     type: "education",
     title: "Bachelor's Degree in CSE (AI)",
-    organization: "JNTUK University, Kakinada",
+    organization: "Sri Vasavi Engineering College, Tadepalligude",
     date: "2023 - 2027",
-    description: "Currently in 5th Semester. Achieved 74.81% aggregate. Focusing on core Computer Science and Artificial Intelligence concepts.",
+    description: "Currently in 6th Semester. Achieved 74.81% aggregate. Focusing on core Computer Science and Artificial Intelligence concepts.",
     icon: <GraduationCap size={20} />
   },
   {
@@ -57,11 +58,11 @@ const Experience = () => {
     <section id="experience" className="py-24 relative z-10 bg-slate-900/50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           transition={{ duration: 0.5 }}
-           className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-neon">Experience & Education</span>
@@ -81,9 +82,8 @@ const Experience = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
-                className={`relative flex flex-col md:flex-row gap-8 items-start ${
-                  idx % 2 === 0 ? "md:flex-row-reverse" : ""
-                }`}
+                className={`relative flex flex-col md:flex-row gap-8 items-start ${idx % 2 === 0 ? "md:flex-row-reverse" : ""
+                  }`}
               >
                 {/* Timeline Node - visible on all screens */}
                 <div className="absolute left-5 md:left-1/2 -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-gradient-to-br from-accent-purple to-accent-blue z-10 text-white hover:scale-125 transition-transform duration-300">
@@ -96,7 +96,7 @@ const Experience = () => {
                     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                       {item.icon}
                     </div>
-                    
+
                     <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold rounded-full bg-slate-800 text-accent-neon border border-accent-neon/20">
                       {item.date}
                     </span>
